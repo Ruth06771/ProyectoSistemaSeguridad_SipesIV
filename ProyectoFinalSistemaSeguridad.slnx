@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="ProyectoFinalSistemaSeguridad/ProyectoFinalSistemaSeguridad.csproj" />
+  <Project Path="ProyectoFinalSS.Datos/ProyectoFinalSS.Datos.csproj" />
+  <Project Path="ProyectoFinalSS.Negocio/ProyectoFinalSS.Negocio.csproj" />
+</Solution>
