@@ -4,11 +4,10 @@ using System.Text;
 
 namespace ProyectoFinalSS.Datos.Entities
 {
-    public class TblTipoRegistro
+    public class TblAccesoPersona
     {
         public int lTRegis_id { get; set; }
-        public string ITRegis_nombre { get; set; }
-        public bool ITRegis_estado{ get; set; }
+        public int lPersonas_id { get; set; }
 
     }
 }

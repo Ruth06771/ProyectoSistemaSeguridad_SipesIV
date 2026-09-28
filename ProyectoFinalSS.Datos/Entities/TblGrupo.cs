@@ -7,9 +7,8 @@ namespace ProyectoFinalSS.Datos.Entities
     public class TblGrupo
     {
         public int lGrupo_id { get; set; }
-        public int lMateria_id { get; set; }
-        public string sGrupo_nombre { get; set; }
         public string sGrupo_descripcion { get; set; }
-        public bool lGrupo_estado { get; set; }
+        public bool sGrupo_estado { get; set; }
+        public string sGrupo_tipo_grupo { get; set; }
     }
 }

@@ -18,6 +18,10 @@ namespace ProyectoFinalSS.Datos.Entities
         public bool sPersonas_estado { get; set; }
         public DateTime sPersonas_fecha_registro { get; set; }
         public string sPersonas_direccion { get; set; }
+        public string sPersonas_tipo_persona { get; set; }
+        public string sTarjetas_uid { get; set; }
+        public string sTarjetas_pin { get; set; }
+        public bool sTarjetas_estado { get; set; }
 
 
     }

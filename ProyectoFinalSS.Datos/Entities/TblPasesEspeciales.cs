@@ -8,7 +8,7 @@ namespace ProyectoFinalSS.Datos.Entities
     {
         public int lPasesEspeciales_id { get; set; }
         public int lPersonas_id { get; set; }
-        public int llab_id { get; set; }
+        public int lLector_id { get; set; }
         public string lPasesEspeciales_motivo { get; set; }
         public DateTime lPasesEspeciales_fecha_inicio { get; set; }
         public DateTime lPasesEspeciales_fecha_fin { get; set; }
