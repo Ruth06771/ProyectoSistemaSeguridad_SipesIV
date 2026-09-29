@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
-    public class TblAsistenciaReservaTipoRepository : ITblAsistenciaReservaTipoRepository
+    public class TblAsistenciaReservaTipoRepository : ITblAccesoPersonaRepository
     {
 
     }
