@@ -11,6 +11,6 @@ namespace ProyectoFinalSS.Datos.Interfaces
         public Task<int> Actualizar(TblPersonas personas);
         public Task<int> Eliminar(int idPersonas);
         public Task<TblPersonas> ObtenerPorId(int idPersonas);
-        public Task<List<TblPersonas>> ObtenerPersonas();
+        public Task<List<TblPersonas>> ObtenerTodos();
     }
 }

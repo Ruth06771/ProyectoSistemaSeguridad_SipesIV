@@ -7,5 +7,6 @@ namespace ProyectoFinalSS.Datos.Repository
 {
     public class TblCentroAlertasRepository : ITblCentroAlertasRepository
     {
+
     }
 }
