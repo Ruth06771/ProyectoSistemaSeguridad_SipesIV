@@ -1,10 +1,10 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProyectoFinalSS.Datos.Entities
+namespace ProyectoFinalSS.Negocio.DTOs.TblAcademico
 {
-    public class TblAcademico
+    public class ReadTblAcademicoDTO
     {
         public int lGrupo_id { get; set; }
         public int lMateria_id { get; set; }
