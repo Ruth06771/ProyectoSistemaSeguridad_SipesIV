@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProyectoFinalSS.Negocio.DTOs.TblUsuarios
 {
-    public class ReadTblusuariosDTO
+    public class ReadTblUsuariosDTO
     {
         public int lUsuarios_id { get; set; }
         public int lPersona_id { get; set; }
