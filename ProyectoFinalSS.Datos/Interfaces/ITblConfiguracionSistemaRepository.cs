@@ -10,7 +10,7 @@ namespace ProyectoFinalSS.Datos.Interfaces
         public Task<int> Crear(TblConfiguracionSistema ConfiguracionSistema);
         public Task<int> Actualizar(TblConfiguracionSistema ConfiguracionSistema);
         public Task<int> Eliminar(int idConfiguracionSistema);
-        public Task<TblArea> ObtenerPorId(int idConfiguracionSistema);
-        public Task<List<TblArea>> ObtenerTodos();
+        public Task<TblConfiguracionSistema> ObtenerPorId(int idConfiguracionSistema);
+        public Task<List<TblConfiguracionSistema>> ObtenerTodos();
     }
 }

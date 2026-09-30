@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ProyectoFinalSS.Datos.Entities
+namespace ProyectoFinalSS.Negocio.DTOs.TblUsuarios
 {
-    public class TblUsuarios
+    public class UpdateTblUsuariosDTO
     {
         public int lUsuarios_id { get; set; }
         public int lPersonas_id { get; set; }
