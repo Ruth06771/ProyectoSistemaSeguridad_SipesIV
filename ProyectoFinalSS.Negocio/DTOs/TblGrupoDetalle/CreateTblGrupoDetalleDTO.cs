@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProyectoFinalSS.Negocio.DTOs.TblGrupoDetalle
 {
-    public class CreateTblGrupoDetalle
+    public class CreateTblGrupoDetalleDTO
     {
         public int lPersonas_id { get; set; }
         public int lGrupo_id { get; set; }
