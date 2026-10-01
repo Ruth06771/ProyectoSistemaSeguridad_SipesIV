@@ -1,7 +1,4 @@
 ﻿using ProyectoFinalSS.Datos.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Interfaces
 {

@@ -11,6 +11,6 @@ namespace ProyectoFinalSS.Negocio.Interfaces
         public Task Actualizar(UpdateTblAreaDTO area);
         public Task Eliminar(int idArea);
         public Task<ReadTblAreaDTO> ObtenerPorId(int idArea);
-        public Task<List<ReadTblAreaDTO>> ObtenerAreas();
+        public Task<List<ReadTblAreaDTO>> ObtenerTodos();
     }
 }

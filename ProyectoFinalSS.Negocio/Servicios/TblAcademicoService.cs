@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProyectoFinalSS.Negocio.Servicios
 {
-    internal class TblAcademicoService
+    public class TblAcademicoService
     {
     }
 }

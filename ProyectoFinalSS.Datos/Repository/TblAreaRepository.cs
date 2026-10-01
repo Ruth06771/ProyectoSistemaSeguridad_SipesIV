@@ -1,13 +1,10 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
-   public class TblAreaRepository : ITblAreaRepository
+    public class TblAreaRepository : ITblAreaRepository
     {
         private readonly SistemaSeguridadDatabase _database;
         public TblAreaRepository(SistemaSeguridadDatabase database)

@@ -11,4 +11,4 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblGrupo
         public string sGrupo_tipo_grupo { get; set; }
     }
 }
-}
+

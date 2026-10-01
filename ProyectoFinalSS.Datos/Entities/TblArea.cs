@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ProyectoFinalSS.Datos.Entities
+﻿namespace ProyectoFinalSS.Datos.Entities
 {
     public class TblArea
     {
@@ -10,7 +6,7 @@ namespace ProyectoFinalSS.Datos.Entities
         public int lPiso_id { get; set; }
         public string sArea_nombre { get; set; }
         public int sArea_capacidad_maxima { get; set; }
-        public bool  sArea_estado { get; set; }
+        public bool sArea_estado { get; set; }
         public string sArea_codigo_aula { get; set; }
 
     }

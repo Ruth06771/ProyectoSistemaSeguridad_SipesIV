@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -21,7 +18,7 @@ namespace ProyectoFinalSS.Datos.Repository
                 sPerfiles_nm = perfiles.sPerfiles_nm,
                 sPerfiles_estado = perfiles.sPerfiles_estado,
                 sPerfiles_descripcion = perfiles.sPerfiles_descripcion,
-               
+
             });
             return resultado.FirstOrDefault();
         }

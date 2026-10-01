@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -22,7 +19,7 @@ namespace ProyectoFinalSS.Datos.Repository
                 sBloqueado_fecha_inicio = bloqueados.sBloqueado_fecha_inicio,
                 sBloqueado_estado = bloqueados.sBloqueado_estado,
                 sBloqueado_motivo = bloqueados.sBloqueado_motivo,
-                sBloqueado_fecha_fin  = bloqueados.sBloqueado_fecha_fin,
+                sBloqueado_fecha_fin = bloqueados.sBloqueado_fecha_fin,
 
             });
             return resultado.FirstOrDefault();

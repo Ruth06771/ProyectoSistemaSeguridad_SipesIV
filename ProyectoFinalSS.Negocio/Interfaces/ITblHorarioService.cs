@@ -8,11 +8,11 @@ namespace ProyectoFinalSS.Negocio.Interfaces
 {
     public interface ITblHorarioService
     {
-        public Task Crear(CreateTblHorarioDTO Horarios);
-        public Task Actualizar(UpdateTblHorarioDTO Horarios);
+        public Task Crear(CreateTblHorarioDTO horarios);
+        public Task Actualizar(UpdateTblHorarioDTO horarios);
         public Task Eliminar(int idHorarios);
         public Task<ReadTblHorarioDTO> ObtenerPorId(int idHorarios);
         public Task<List<ReadTblHorarioDTO>> ObtenerTodos();
     }
 }
-}
+

@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -64,5 +61,5 @@ namespace ProyectoFinalSS.Datos.Repository
             return resultado.FirstOrDefault();
         }
     }
-    
+
 }

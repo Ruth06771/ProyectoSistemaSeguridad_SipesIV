@@ -1,9 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Text;
 using Dapper;
 
 namespace ProyectoFinalSS.Datos.AccesoDatos
@@ -11,7 +8,11 @@ namespace ProyectoFinalSS.Datos.AccesoDatos
     public class SistemaSeguridadDatabase
     {
         private readonly IConfiguration _configuration;
-        private readonly string connection = "DefaultConnection";
+
+        public SistemaSeguridadDatabase(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
 
         public async Task<IEnumerable<T>> GetData<T>(string functionName, object parameters = null)
         {
@@ -27,7 +28,6 @@ namespace ProyectoFinalSS.Datos.AccesoDatos
                 }
                 else
                 {
-                    // Extraer nombres de parámetros de forma segura si es un objeto anónimo
                     var propNames = parameters.GetType().GetProperties().Select(p => $"@{p.Name}");
                     var paramNames = string.Join(", ", propNames);
 
@@ -41,6 +41,5 @@ namespace ProyectoFinalSS.Datos.AccesoDatos
                 throw new Exception($"Error al ejecutar la función {functionName}: {ex.Message}", ex);
             }
         }
-
     }
 }

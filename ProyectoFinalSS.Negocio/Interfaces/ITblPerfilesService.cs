@@ -8,8 +8,8 @@ namespace ProyectoFinalSS.Negocio.Interfaces
 {
     public interface ITblPerfilesService
     {
-        public Task Crear(CreateTblPerfilesDTO Perfiles);
-        public Task Actualizar(UpdateTblPerfilesDTO Perfiles);
+        public Task Crear(CreateTblPerfilesDTO perfiles);
+        public Task Actualizar(UpdateTblPerfilesDTO perfiles);
         public Task Eliminar(int idPerfiles);
         public Task<ReadTblPerfilesDTO> ObtenerPorId(int idPerfiles);
         public Task<List<ReadTblPerfilesDTO>> ObtenerTodos();

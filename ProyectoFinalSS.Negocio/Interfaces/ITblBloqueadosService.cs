@@ -10,8 +10,8 @@ namespace ProyectoFinalSS.Negocio.Interfaces
     {
         public Task Crear(CreateTblBloqueadosDTO bloqueados);
         public Task Actualizar(UpdateTblBloqueadosDTO bloqueados);
-        public Task Eliminar(int idBloqueados);
-        public Task<ReadTblBloqueadosDTO> ObtenerPorId(int idBloqueados);
+        public Task Eliminar(int idbloqueados);
+        public Task<ReadTblBloqueadosDTO> ObtenerPorId(int idbloqueados);
         public Task<List<ReadTblBloqueadosDTO>> ObtenerTodos();
     }
 }

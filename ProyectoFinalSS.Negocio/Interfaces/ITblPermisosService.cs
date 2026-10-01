@@ -8,8 +8,8 @@ namespace ProyectoFinalSS.Negocio.Interfaces
 {
     public interface ITblPermisosService
     {
-        public Task Crear(CreateTblPermisosDTO Permisos);
-        public Task Actualizar(UpdateTblPermisosDTO Permisos);
+        public Task Crear(CreateTblPermisosDTO permisos);
+        public Task Actualizar(UpdateTblPermisosDTO permisos);
         public Task Eliminar(int idPermisos);
         public Task<ReadTblPermisosDTO> ObtenerPorId(int idPermisos);
         public Task<List<ReadTblPermisosDTO>> ObtenerTodos();

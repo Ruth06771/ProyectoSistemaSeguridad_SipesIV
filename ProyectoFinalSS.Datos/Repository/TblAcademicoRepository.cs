@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -21,7 +18,7 @@ namespace ProyectoFinalSS.Datos.Repository
             {
                 lMateria_id = Academico.lMateria_id,
                 sAcademico_nombre_grupo = Academico.sAcademico_nombre_grupo,
-               
+
             });
             return resultado.FirstOrDefault();
         }

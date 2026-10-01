@@ -6,6 +6,6 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblDetalleHorario
 {
     public class DeleteTblDetalleHorarioDTO
     {
-        public int lPersonas_id { get; set; }
+        public int lhorario_id { get; set; }
     }
 }

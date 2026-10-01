@@ -1,9 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ProyectoFinalSS.Datos.Entities
+﻿namespace ProyectoFinalSS.Datos.Entities
 {
     public class TblRegistroAccesos
     {

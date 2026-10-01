@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -52,11 +49,11 @@ namespace ProyectoFinalSS.Datos.Repository
             return resultado.ToList();
         }
         public async Task<TblPisos> ObtenerPorId(int idPisos)
-        { 
-        IEnumerable<TblPisos> resultado = await _database.GetData<TblPisos>("fn_tblpisos_obtener_por_id", new
+        {
+            IEnumerable<TblPisos> resultado = await _database.GetData<TblPisos>("fn_tblpisos_obtener_por_id", new
             {
-            lPisos_id = idPisos
-        });
+                lPisos_id = idPisos
+            });
             return resultado.FirstOrDefault();
         }
     }

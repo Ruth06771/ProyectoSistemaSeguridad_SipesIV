@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -51,7 +48,7 @@ namespace ProyectoFinalSS.Datos.Repository
         }
         public async Task<List<TblGrupoDetalle>> ObtenerTodos()
         {
-            IEnumerable< TblGrupoDetalle> resultado = await _database.GetData<TblGrupoDetalle>("fn_tblgrupodetalle_obtener_todos");
+            IEnumerable<TblGrupoDetalle> resultado = await _database.GetData<TblGrupoDetalle>("fn_tblgrupodetalle_obtener_todos");
             return resultado.ToList();
         }
         public async Task<TblGrupoDetalle> ObtenerPorId(int idGrupoDetalle)

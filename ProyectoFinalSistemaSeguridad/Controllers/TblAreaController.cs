@@ -1,6 +1,83 @@
-﻿namespace ProyectoFinalSistemaSeguridad.Controllers
+﻿using Microsoft.AspNetCore.Mvc;
+using ProyectoFinalSS.Negocio.DTOs.TblArea;
+using ProyectoFinalSS.Negocio.Interfaces;
+
+namespace ProyectoFinalSistemaSeguridad.Controllers
 {
-    public class TblAreaController
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TblAreaController : ControllerBase
     {
+        private readonly ITblAreaService _tblAreaService;
+        public TblAreaController(ITblAreaService tblAreaService)
+        {
+            _tblAreaService = tblAreaService;
+        }
+        [HttpPost("Crear")]
+        public async Task<ActionResult> Crear(CreateTblAreaDTO area)
+        {
+            try
+            {
+                await _tblAreaService.Crear(area);
+                return StatusCode(201, new { message = "Area creada correctamente" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+        [HttpPut("Actualizar")]
+        public async Task<ActionResult> Actualizar(UpdateTblAreaDTO area)
+        {
+            try
+            {
+                await _tblAreaService.Actualizar(area);
+                return StatusCode(201, new { message = "Actualizado correctamente" });
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+        [HttpDelete("Eliminar")]
+        public async Task<ActionResult> Eliminar([FromBody] DeleteTblAreaDto dto)
+        {
+            try
+            {
+                await _tblAreaService.Eliminar(dto.lArea_id);
+                return Ok(new { message = "Eliminado correctamente" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+        [HttpGet("ObtenerPorId/{idArea}")]
+        public async Task<ActionResult> ObtenerPorId(int idArea)
+        {
+            try
+            {
+                var area = await _tblAreaService.ObtenerPorId(idArea);
+                if (area == null) return NotFound(new { message = $"El area con Id {idArea} no existe" });
+                return Ok(area);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
+        [HttpGet("ObtenerTodos")]
+        public async Task<ActionResult> ObtenerTodos()
+        {
+            try
+            {
+                return Ok(await _tblAreaService.ObtenerTodos());
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
+            }
+        }
     }
 }

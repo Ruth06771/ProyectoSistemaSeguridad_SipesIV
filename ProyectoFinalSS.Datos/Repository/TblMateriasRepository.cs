@@ -1,9 +1,6 @@
 ﻿using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Entities;
 using ProyectoFinalSS.Datos.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace ProyectoFinalSS.Datos.Repository
 {
@@ -55,7 +52,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<TblMaterias> resultado = await _database.GetData<TblMaterias>("fn_tblmaterias_obtener_por_id", new
             {
-               lMateria_id = idMaterias
+                lMateria_id = idMaterias
             });
             return resultado.FirstOrDefault();
         }

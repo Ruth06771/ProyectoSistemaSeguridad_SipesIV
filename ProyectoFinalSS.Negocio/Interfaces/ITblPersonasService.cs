@@ -8,8 +8,8 @@ namespace ProyectoFinalSS.Negocio.Interfaces
 {
     public interface ITblPersonasService
     {
-        public Task Crear(CreateTblPersonasDTO Personas);
-        public Task Actualizar(UpdateTblPersonasDTO Personas);
+        public Task Crear(CreateTblPersonasDTO personas);
+        public Task Actualizar(UpdateTblPersonasDTO personas);
         public Task Eliminar(int idPersonas);
         public Task<ReadTblPersonasDTO> ObtenerPorId(int idPersonas);
         public Task<List<ReadTblPersonasDTO>> ObtenerTodos();

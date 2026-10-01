@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="GitHub.Copilot.SDK" Version="1.0.15" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.11" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.17.12" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.3" />
   </ItemGroup>
 
 </Project>
