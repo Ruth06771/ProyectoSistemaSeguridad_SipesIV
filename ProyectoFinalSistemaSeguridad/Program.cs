@@ -3,7 +3,7 @@ using ProyectoFinalSS.Datos.AccesoDatos;
 using ProyectoFinalSS.Datos.Interfaces;
 using ProyectoFinalSS.Datos.Repository;
 using ProyectoFinalSS.Negocio.Interfaces;
-using ProyectoFinalSS.Negocio.Servicios;
+using ProyectoFinalSS.Negocio.Servicios;    
 using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -69,10 +69,9 @@ builder.Services.AddScoped<ITblPerfilesService, TblPerfilesService>();
 builder.Services.AddScoped<ITblPermisosService, TblPermisosService>();
 builder.Services.AddScoped<ITblPersonasService, TblPersonasService>();
 builder.Services.AddScoped<ITblPisosService, TblPisosService>();
-builder.Services.AddScoped<ITblRegistroAccesosService, TblRegistroAccesoRepository>();
-builder.Services.AddScoped<ITblTiposAccesoService, TblTiposAccesoRepository>();
-builder.Services.AddScoped<ITblUsuariosService, TblUsuariosRepository>();
-
+builder.Services.AddScoped<ITblRegistroAccesosService, TblRegistroAccesosService>();
+builder.Services.AddScoped<ITblTiposAccesoService, TblTiposAccesoService>();
+builder.Services.AddScoped<ITblUsuariosService, TblUsuariosService>();
 var app = builder.Build();
 
 
