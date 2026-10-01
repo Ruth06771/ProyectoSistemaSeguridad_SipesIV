@@ -6,6 +6,6 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblLectores
 {
     public class DeleteTblLectoresDTO
     {
-        public int lArea_id { get; set; }
+        public int lLector_id { get; set; }
     }
 }
