@@ -69,9 +69,9 @@ builder.Services.AddScoped<ITblPerfilesService, TblPerfilesService>();
 builder.Services.AddScoped<ITblPermisosService, TblPermisosService>();
 builder.Services.AddScoped<ITblPersonasService, TblPersonasService>();
 builder.Services.AddScoped<ITblPisosService, TblPisosService>();
-builder.Services.AddScoped<ITblRegistroAccesosService, TblRegistroAccesoRepository>();
-builder.Services.AddScoped<ITblTiposAccesoService, TblTiposAccesoRepository>();
-builder.Services.AddScoped<ITblUsuariosService, TblUsuariosRepository>();
+builder.Services.AddScoped<ITblRegistroAccesosService, TblRegistroAccesosService>();
+builder.Services.AddScoped<ITblTiposAccesoService, TblTiposAccesoService>();
+builder.Services.AddScoped<ITblUsuariosService, TblUsuariosService>();
 
 var app = builder.Build();
 
