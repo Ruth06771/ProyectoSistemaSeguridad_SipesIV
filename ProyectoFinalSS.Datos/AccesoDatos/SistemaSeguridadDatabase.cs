@@ -1,7 +1,12 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Dapper;
 using Microsoft.Extensions.Configuration;
+using Npgsql;
+using System;
+using System.Collections.Generic;
 using System.Data;
-using Dapper;
+using System.Linq;
+using System.Reflection;
+using System.Threading.Tasks;
 
 namespace ProyectoFinalSS.Datos.AccesoDatos
 {
@@ -12,31 +17,39 @@ namespace ProyectoFinalSS.Datos.AccesoDatos
         public SistemaSeguridadDatabase(IConfiguration configuration)
         {
             _configuration = configuration;
+
+            // Mapeo dinámico e insensible a mayúsculas/minúsculas y '_' para Dapper
+            SqlMapper.TypeMapProvider = type =>
+                new CustomPropertyTypeMap(type, (t, columnName) =>
+                    t.GetProperties().FirstOrDefault(p =>
+                        p.Name.Equals(columnName, StringComparison.OrdinalIgnoreCase) ||
+                        p.Name.Replace("_", "").Equals(columnName.Replace("_", ""), StringComparison.OrdinalIgnoreCase))
+                );
         }
 
         public async Task<IEnumerable<T>> GetData<T>(string functionName, object parameters = null)
         {
-            using IDbConnection conn = new SqlConnection(_configuration.GetConnectionString("DefaultConnection"));
-
+            // Se agregan comillas al nombre de la cadena de conexión
+            using IDbConnection conn = new NpgsqlConnection(_configuration.GetConnectionString("DefaultConnection"));
             try
             {
                 string sql;
 
                 if (parameters == null)
                 {
-                    sql = $"SELECT * FROM dbo.[{functionName}]()";
+                    sql = $"SELECT * FROM {functionName}()";
                 }
                 else
                 {
-                    var propNames = parameters.GetType().GetProperties().Select(p => $"@{p.Name}");
-                    var paramNames = string.Join(", ", propNames);
-
-                    sql = $"SELECT * FROM dbo.[{functionName}]({paramNames})";
+                    var properties = parameters.GetType().GetProperties();
+                    var paramNames = string.Join(", ", properties.Select(p => $"@{p.Name}"));
+                    sql = $"SELECT * FROM {functionName}({paramNames})";
                 }
 
-                return await conn.QueryAsync<T>(sql, parameters, commandType: CommandType.Text);
+                var result = await conn.QueryAsync<T>(sql, parameters, commandType: CommandType.Text);
+                return result;
             }
-            catch (SqlException ex)
+            catch (NpgsqlException ex)
             {
                 throw new Exception($"Error al ejecutar la función {functionName}: {ex.Message}", ex);
             }
