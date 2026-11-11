@@ -15,7 +15,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllogsistema_crear", new
             {
-                lUsuario_id = LogsSistema.lUsuario_id,
+                lUsuarios_id = LogsSistema.lUsuarios_id,
                 sLog_modulo = LogsSistema.sLog_modulo,
                 sLog_accion = LogsSistema.sLog_accion,
                 sLog_detalle = LogsSistema.sLog_detalle,
@@ -31,7 +31,7 @@ namespace ProyectoFinalSS.Datos.Repository
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllogsistema_actualizar", new TblLogsSistema
             {
                 lLog_id = LogsSistema.lLog_id,
-                lUsuario_id = LogsSistema.lUsuario_id,
+                lUsuarios_id = LogsSistema.lUsuarios_id,
                 sLog_modulo = LogsSistema.sLog_modulo,
                 sLog_accion = LogsSistema.sLog_accion,
                 sLog_detalle = LogsSistema.sLog_detalle,

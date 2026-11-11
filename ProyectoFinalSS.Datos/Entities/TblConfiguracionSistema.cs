@@ -3,7 +3,7 @@
     public class TblConfiguracionSistema
     {
         public int lConfig_id { get; set; }
-        public int lUsuario_id { get; set; }
+        public int lUsuarios_id { get; set; }
         public int sConfig_intentos_fallidos_bloqueo { get; set; }
         public int sConfig_inactividad_sesion { get; set; }
         public int sConfig_tolerancia_marcaje_minutos { get; set; }

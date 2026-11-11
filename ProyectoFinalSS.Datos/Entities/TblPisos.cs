@@ -3,7 +3,7 @@
     public class TblPisos
     {
         public int lPisos_id { get; set; }
-        public int lEdificios_id { get; set; }
+        public int lEdificio_id { get; set; }
         public string sPiso_nombre { get; set; }
         public string sPiso_codigo_corto { get; set; }
 

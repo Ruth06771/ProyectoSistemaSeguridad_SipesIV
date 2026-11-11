@@ -13,7 +13,7 @@ namespace ProyectoFinalSS.Datos.Repository
         }
         public async Task<int> Crear(TblContactoEmergencia ContactoEmergencia)
         {
-            IEnumerable<int> resultado = await _database.GetData<int>("fn_tblcontantoemergencia_crear", new
+            IEnumerable<int> resultado = await _database.GetData<int>("fn_tblcontactoemergencia_crear", new
             {
                 lPersonas_id = ContactoEmergencia.lPersonas_id,
                 sContacto_emerg_nm = ContactoEmergencia.sContacto_emerg_nm,
@@ -27,7 +27,7 @@ namespace ProyectoFinalSS.Datos.Repository
 
         public async Task<int> Actualizar(TblContactoEmergencia ContactoEmergencia)
         {
-            IEnumerable<int> resultado = await _database.GetData<int>("fn_tblcontacoemergencia_actualizar", new TblContactoEmergencia
+            IEnumerable<int> resultado = await _database.GetData<int>("fn_tblcontactoemergencia_actualizar", new TblContactoEmergencia
             {
                 lContacto_emerg_id = ContactoEmergencia.lContacto_emerg_id,
                 lPersonas_id = ContactoEmergencia.lPersonas_id,

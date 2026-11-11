@@ -16,6 +16,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblacademico_crear", new
             {
+                lGrupo_id = Academico.lGrupo_id,
                 lMateria_id = Academico.lMateria_id,
                 sAcademico_nombre_grupo = Academico.sAcademico_nombre_grupo,
 

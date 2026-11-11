@@ -45,12 +45,12 @@ namespace ProyectoFinalSS.Datos.Repository
         }
         public async Task<List<TblEdificios>> ObtenerTodos()
         {
-            IEnumerable<TblEdificios> resultado = await _database.GetData<TblEdificios>("fn_tblacademico_obtener_todos");
+            IEnumerable<TblEdificios> resultado = await _database.GetData<TblEdificios>("fn_tbledificios_obtener_todos");
             return resultado.ToList();
         }
         public async Task<TblEdificios> ObtenerPorId(int idEdificios)
         {
-            IEnumerable<TblEdificios> resultado = await _database.GetData<TblEdificios>("fn_tblacademico_obtener_por_id", new
+            IEnumerable<TblEdificios> resultado = await _database.GetData<TblEdificios>("fn_tbledificios_obtener_por_id", new
             {
                 lEdificio_id = idEdificios
             });

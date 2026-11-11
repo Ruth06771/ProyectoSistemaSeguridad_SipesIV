@@ -15,6 +15,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblexterno_crear", new
             {
+                lGrupo_id = externo.lGrupo_id,
                 sExterno_nm = externo.sExterno_nm
 
             });

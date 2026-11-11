@@ -19,6 +19,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblAccesoPersona objTblAccesoPersona = new TblAccesoPersona
             {
+                lTRegistro_id = tblAccesoPersona.lTRegistro_id,
                 lPersonas_id = tblAccesoPersona.lPersonas_id
             };
             await _tblAccesoPersonaRepository.Crear(objTblAccesoPersona);
@@ -28,7 +29,8 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblAccesoPersona objTblAccesoPersona = new TblAccesoPersona
             {
-                lTRegis_id = tblAccesoPersona.lTRegis_id,
+                lAcceso_id = tblAccesoPersona.lAcceso_id,
+                lTRegistro_id = tblAccesoPersona.lTRegistro_id,
                 lPersonas_id = tblAccesoPersona.lPersonas_id
             };
             await _tblAccesoPersonaRepository.Actualizar(objTblAccesoPersona);
@@ -45,7 +47,8 @@ namespace ProyectoFinalSS.Negocio.Servicios
             if (result is null) return null;
             return new ReadTblAccesoPersonaDTO
             {
-                lTRegis_id = result.lTRegis_id,
+                lAcceso_id = result.lAcceso_id,
+                lTRegistro_id = result.lTRegistro_id,
                 lPersonas_id = result.lPersonas_id
             };
         }
@@ -59,7 +62,8 @@ namespace ProyectoFinalSS.Negocio.Servicios
             {
                 var tblAccesoPersonaDTO = new ReadTblAccesoPersonaDTO
                 {
-                    lTRegis_id = tblAccesoPersona.lTRegis_id,
+                    lAcceso_id = tblAccesoPersona.lAcceso_id,
+                    lTRegistro_id = tblAccesoPersona.lTRegistro_id,
                     lPersonas_id = tblAccesoPersona.lPersonas_id
                 };
                 TblAccesoPersonasDTO.Add(tblAccesoPersonaDTO);

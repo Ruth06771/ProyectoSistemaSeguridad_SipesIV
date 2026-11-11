@@ -7,7 +7,7 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblLogsSistema
     public class ReadTblLogsSistemaDTO
     {
         public int lLog_id { get; set; }
-        public int lUsuario_id { get; set; }
+        public int lUsuarios_id { get; set; }
         public string sLog_modulo { get; set; }
         public string sLog_accion { get; set; }
         public string sLog_detalle { get; set; }

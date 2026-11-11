@@ -55,8 +55,8 @@ namespace ProyectoFinalSistemaSeguridad.Controllers
                 return StatusCode(500, new { message = ex.Message });
             }
         }
-        [HttpGet("ObtenerPorId/{idModulo}")]
-        public async Task<ActionResult> ObtenerPorId(int idModulos)
+        [HttpGet("ObtenerPorId/{idModulos}")]
+        public async Task<ActionResult> ObtenerPorId([FromRoute] int idModulos)
         {
             try
             {

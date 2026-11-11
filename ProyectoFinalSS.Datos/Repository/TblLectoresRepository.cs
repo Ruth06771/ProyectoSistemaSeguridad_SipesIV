@@ -7,10 +7,12 @@ namespace ProyectoFinalSS.Datos.Repository
     public class TblLectoresRepository : ITblLectoresRepository
     {
         private readonly SistemaSeguridadDatabase _database;
+
         public TblLectoresRepository(SistemaSeguridadDatabase database)
         {
             _database = database;
         }
+
         public async Task<int> Crear(TblLectores lectores)
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllectores_crear", new
@@ -21,16 +23,14 @@ namespace ProyectoFinalSS.Datos.Repository
                 sLector_mac = lectores.sLector_mac,
                 sLector_tipo_acceso = lectores.sLector_tipo_acceso,
                 sLector_estado = lectores.sLector_estado,
-                sLector_ultimo_ping = lectores.sLector_ultimo_ping,
-
-
+                sLector_ultimo_ping = lectores.sLector_ultimo_ping
             });
             return resultado.FirstOrDefault();
         }
 
         public async Task<int> Actualizar(TblLectores lectores)
         {
-            IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllectores_actualizar", new TblLectores
+            IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllectores_actualizar", new
             {
                 lLector_id = lectores.lLector_id,
                 lArea_id = lectores.lArea_id,
@@ -39,12 +39,11 @@ namespace ProyectoFinalSS.Datos.Repository
                 sLector_mac = lectores.sLector_mac,
                 sLector_tipo_acceso = lectores.sLector_tipo_acceso,
                 sLector_estado = lectores.sLector_estado,
-                sLector_ultimo_ping = lectores.sLector_ultimo_ping,
-
+                sLector_ultimo_ping = lectores.sLector_ultimo_ping
             });
             return resultado.FirstOrDefault();
-
         }
+
         public async Task<int> Eliminar(int idLectores)
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tbllectores_eliminar", new
@@ -53,11 +52,13 @@ namespace ProyectoFinalSS.Datos.Repository
             });
             return resultado.FirstOrDefault();
         }
+
         public async Task<List<TblLectores>> ObtenerTodos()
         {
             IEnumerable<TblLectores> resultado = await _database.GetData<TblLectores>("fn_tbllectores_obtener_todos");
             return resultado.ToList();
         }
+
         public async Task<TblLectores> ObtenerPorId(int idLectores)
         {
             IEnumerable<TblLectores> resultado = await _database.GetData<TblLectores>("fn_tbllectores_obtener_por_id", new

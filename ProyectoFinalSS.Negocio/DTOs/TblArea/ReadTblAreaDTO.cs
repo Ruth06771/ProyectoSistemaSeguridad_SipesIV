@@ -7,7 +7,7 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblArea
     public class ReadTblAreaDTO
     {
         public int lArea_id { get; set; }
-        public int lPiso_id { get; set; }
+        public int lPisos_id { get; set; }
         public string sArea_nombre { get; set; }
         public int sArea_capacidad_maxima { get; set; }
         public bool sArea_estado { get; set; }

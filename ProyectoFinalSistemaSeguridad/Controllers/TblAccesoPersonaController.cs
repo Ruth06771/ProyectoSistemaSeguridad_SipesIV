@@ -46,7 +46,7 @@ namespace ProyectoFinalSistemaSeguridad.Controllers
         {
             try
             {
-                await _tblAccesoPersonaService.Eliminar(dto.lTRegis_id);
+                await _tblAccesoPersonaService.Eliminar(dto.lAcceso_id);
                 return Ok(new { message = "Eliminado correctamente" });
             }
             catch (Exception ex)

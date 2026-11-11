@@ -16,7 +16,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblarea_crear", new
             {
-                lPiso_id = area.lPiso_id,
+                lPisos_id = area.lPisos_id,
                 sArea_nombre = area.sArea_nombre,
                 sArea_capacidad_maxima = area.sArea_capacidad_maxima,
                 sArea_estado = area.sArea_estado,
@@ -30,7 +30,7 @@ namespace ProyectoFinalSS.Datos.Repository
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblarea_actualizar", new TblArea
             {
                 lArea_id = area.lArea_id,
-                lPiso_id = area.lPiso_id,
+                lPisos_id = area.lPisos_id,
                 sArea_nombre = area.sArea_nombre,
                 sArea_capacidad_maxima = area.sArea_capacidad_maxima,
                 sArea_estado = area.sArea_estado,

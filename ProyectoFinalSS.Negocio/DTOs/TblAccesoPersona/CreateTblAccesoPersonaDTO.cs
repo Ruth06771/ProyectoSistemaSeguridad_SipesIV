@@ -6,7 +6,7 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblAccesoPersona
 {
     public class CreateTblAccesoPersonaDTO
     {
-      
+        public int lTRegistro_id { get; set; }
         public int lPersonas_id { get; set; }
     }
 }

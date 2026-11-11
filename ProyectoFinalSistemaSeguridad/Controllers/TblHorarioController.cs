@@ -54,7 +54,7 @@ namespace ProyectoFinalSistemaSeguridad.Controllers
                 return StatusCode(500, new { message = ex.Message });
             }
         }
-        [HttpGet("ObtenerPorId/{idHorario}")]
+        [HttpGet("ObtenerPorId/{idHorarios}")]
         public async Task<ActionResult> ObtenerPorId(int idHorarios)
         {
             try

@@ -19,7 +19,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblArea objTblArea = new TblArea
             {
-                lPiso_id = tblArea.lPiso_id,
+                lPisos_id = tblArea.lPisos_id,
                 sArea_nombre = tblArea.sArea_nombre,
                 sArea_capacidad_maxima = tblArea.sArea_capacidad_maxima,
                 sArea_estado = tblArea.sArea_estado,
@@ -33,7 +33,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             TblArea objTblArea = new TblArea
             {
                 lArea_id = tblArea.lArea_id,
-                lPiso_id = tblArea.lPiso_id,
+                lPisos_id = tblArea.lPisos_id,
                 sArea_nombre = tblArea.sArea_nombre,
                 sArea_capacidad_maxima = tblArea.sArea_capacidad_maxima,
                 sArea_estado = tblArea.sArea_estado,
@@ -54,7 +54,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             return new ReadTblAreaDTO
             {
                 lArea_id = result.lArea_id,
-                lPiso_id = result.lPiso_id,
+                lPisos_id = result.lPisos_id,
                 sArea_nombre = result.sArea_nombre,
                 sArea_capacidad_maxima = result.sArea_capacidad_maxima,
                 sArea_estado = result.sArea_estado,
@@ -72,7 +72,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
                 var tblAreaDTO = new ReadTblAreaDTO
                 {
                     lArea_id = tblArea.lArea_id,
-                    lPiso_id = tblArea.lPiso_id,
+                    lPisos_id = tblArea.lPisos_id,
                     sArea_nombre = tblArea.sArea_nombre,
                     sArea_capacidad_maxima = tblArea.sArea_capacidad_maxima,
                     sArea_estado = tblArea.sArea_estado,

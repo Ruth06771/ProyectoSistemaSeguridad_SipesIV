@@ -54,13 +54,15 @@ namespace ProyectoFinalSistemaSeguridad.Controllers
                 return StatusCode(500, new { message = ex.Message });
             }
         }
-        [HttpGet("ObtenerPorId/{idRegistro_Accesos}")]
+        [HttpGet("ObtenerPorId/{idRegistroAccesos}")]
         public async Task<ActionResult> ObtenerPorId(int idRegistroAccesos)
         {
             try
             {
                 var registroAcceso = await _tblRegistroAccesosService.ObtenerPorId(idRegistroAccesos);
-                if (registroAcceso == null) return NotFound(new { message = $"El registro de acceso con Id {idRegistroAccesos} no existe" });
+                if (registroAcceso == null)
+                    return NotFound(new { message = $"El registro de acceso con Id {idRegistroAccesos} no existe" });
+
                 return Ok(registroAcceso);
             }
             catch (Exception ex)

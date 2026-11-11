@@ -46,7 +46,7 @@ namespace ProyectoFinalSistemaSeguridad.Controllers
         {
             try
             {
-                await _tblDetalleHorarioService.Eliminar(dto.lhorario_id);
+                await _tblDetalleHorarioService.Eliminar(dto.lDetalleHorario_id);
                 return Ok(new { message = "Eliminado correctamente" });
             }
             catch (Exception ex)

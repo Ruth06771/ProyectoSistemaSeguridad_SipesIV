@@ -6,6 +6,6 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblAccesoPersona
 {
     public class DeleteTblAccesoPersonaDTO
     {
-        public int lTRegis_id { get; set; }
+        public int lAcceso_id { get; set; }
     }
 }

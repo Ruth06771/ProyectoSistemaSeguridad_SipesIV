@@ -19,7 +19,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblLogsSistema objTblLogsSistema = new TblLogsSistema
             {
-                lUsuario_id = tblLogsSistema.lUsuario_id,
+                lUsuarios_id = tblLogsSistema.lUsuarios_id,
                 sLog_modulo = tblLogsSistema.sLog_modulo,
                 sLog_accion = tblLogsSistema.sLog_accion,
                 sLog_detalle = tblLogsSistema.sLog_detalle,
@@ -34,7 +34,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             TblLogsSistema objTblLogsSistema = new TblLogsSistema
             {
                 lLog_id = tblLogsSistema.lLog_id,
-                lUsuario_id = tblLogsSistema.lUsuario_id,
+                lUsuarios_id = tblLogsSistema.lUsuarios_id,
                 sLog_modulo = tblLogsSistema.sLog_modulo,
                 sLog_accion = tblLogsSistema.sLog_accion,
                 sLog_detalle = tblLogsSistema.sLog_detalle,
@@ -56,7 +56,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             return new ReadTblLogsSistemaDTO
             {
                 lLog_id = result.lLog_id,
-                lUsuario_id = result.lUsuario_id,
+                lUsuarios_id = result.lUsuarios_id,
                 sLog_modulo = result.sLog_modulo,
                 sLog_accion = result.sLog_accion,
                 sLog_detalle = result.sLog_detalle,
@@ -75,7 +75,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
                 var tblLogsSistemaDTO = new ReadTblLogsSistemaDTO
                 {
                     lLog_id = tblLogsSistema.lLog_id,
-                    lUsuario_id = tblLogsSistema.lUsuario_id,
+                    lUsuarios_id = tblLogsSistema.lUsuarios_id,
                     sLog_modulo = tblLogsSistema.sLog_modulo,
                     sLog_accion = tblLogsSistema.sLog_accion,
                     sLog_detalle = tblLogsSistema.sLog_detalle,

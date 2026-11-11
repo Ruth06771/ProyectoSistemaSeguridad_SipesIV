@@ -19,7 +19,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblConfiguracionSistema objTblConfiguracionSistema = new TblConfiguracionSistema
             {
-                lUsuario_id = tblConfiguracionSistema.lUsuario_id,
+                lUsuarios_id = tblConfiguracionSistema.lUsuarios_id,
                 sConfig_intentos_fallidos_bloqueo = tblConfiguracionSistema.sConfig_intentos_fallidos_bloqueo,
                 sConfig_inactividad_sesion = tblConfiguracionSistema.sConfig_inactividad_sesion,
                 sConfig_tolerancia_marcaje_minutos = tblConfiguracionSistema.sConfig_tolerancia_marcaje_minutos,
@@ -35,7 +35,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             TblConfiguracionSistema objTblConfiguracionSistema = new TblConfiguracionSistema
             {
                 lConfig_id = tblConfiguracionSistema.lConfig_id,
-                lUsuario_id = tblConfiguracionSistema.lUsuario_id,
+                lUsuarios_id = tblConfiguracionSistema.lUsuarios_id,
                 sConfig_intentos_fallidos_bloqueo = tblConfiguracionSistema.sConfig_intentos_fallidos_bloqueo,
                 sConfig_inactividad_sesion = tblConfiguracionSistema.sConfig_inactividad_sesion,
                 sConfig_tolerancia_marcaje_minutos = tblConfiguracionSistema.sConfig_tolerancia_marcaje_minutos,
@@ -58,7 +58,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             return new ReadTblConfiguracionSistemaDTO
             {
                 lConfig_id = result.lConfig_id,
-                lUsuario_id = result.lUsuario_id,
+                lUsuarios_id = result.lUsuarios_id,
                 sConfig_intentos_fallidos_bloqueo = result.sConfig_intentos_fallidos_bloqueo,
                 sConfig_inactividad_sesion = result.sConfig_inactividad_sesion,
                 sConfig_tolerancia_marcaje_minutos = result.sConfig_tolerancia_marcaje_minutos,
@@ -78,7 +78,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
                 var tblConfiguracionSistemaDTO = new ReadTblConfiguracionSistemaDTO
                 {
                     lConfig_id = tblConfiguracionSistema.lConfig_id,
-                    lUsuario_id = tblConfiguracionSistema.lUsuario_id,
+                    lUsuarios_id = tblConfiguracionSistema.lUsuarios_id,
                     sConfig_intentos_fallidos_bloqueo = tblConfiguracionSistema.sConfig_intentos_fallidos_bloqueo,
                     sConfig_inactividad_sesion = tblConfiguracionSistema.sConfig_inactividad_sesion,
                     sConfig_tolerancia_marcaje_minutos = tblConfiguracionSistema.sConfig_tolerancia_marcaje_minutos,

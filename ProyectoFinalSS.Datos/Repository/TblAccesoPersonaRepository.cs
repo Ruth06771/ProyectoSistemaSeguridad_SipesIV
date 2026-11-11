@@ -16,6 +16,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblaccesopersona_crear", new
             {
+                lTRegistro_id = AccesoPersona.lTRegistro_id,
                 lPersonas_id = AccesoPersona.lPersonas_id
 
             });
@@ -26,7 +27,8 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblaccesopersona_actualizar", new TblAccesoPersona
             {
-                lTRegis_id = AccesoPersona.lTRegis_id,
+                lAcceso_id = AccesoPersona.lAcceso_id,
+                lTRegistro_id = AccesoPersona.lTRegistro_id,
                 lPersonas_id = AccesoPersona.lPersonas_id
             });
             return resultado.FirstOrDefault();
@@ -36,7 +38,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblaccesopersona_eliminar", new
             {
-                lTRegis_id = idAccesoPersona
+                lAcceso_id = idAccesoPersona
             });
             return resultado.FirstOrDefault();
         }
@@ -49,7 +51,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<TblAccesoPersona> resultado = await _database.GetData<TblAccesoPersona>("fn_tblaccesopersona_obtener_por_id", new
             {
-                lTRegis_id = idAccesoPersona
+                lAcceso_id = idAccesoPersona
             });
             return resultado.FirstOrDefault();
         }

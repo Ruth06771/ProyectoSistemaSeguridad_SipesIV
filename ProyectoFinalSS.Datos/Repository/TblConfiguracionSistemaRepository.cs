@@ -15,7 +15,7 @@ namespace ProyectoFinalSS.Datos.Repository
         {
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblconfiguracionsistema_crear", new
             {
-                lUsuario_id = ConfiguracionSistema.lUsuario_id,
+                lUsuarios_id = ConfiguracionSistema.lUsuarios_id,
                 sConfig_intentos_fallidos_bloqueo = ConfiguracionSistema.sConfig_intentos_fallidos_bloqueo,
                 sConfig_inactividad_sesion = ConfiguracionSistema.sConfig_inactividad_sesion,
                 sConfig_tolerancia_marcaje_minutos = ConfiguracionSistema.sConfig_tolerancia_marcaje_minutos,
@@ -31,7 +31,7 @@ namespace ProyectoFinalSS.Datos.Repository
             IEnumerable<int> resultado = await _database.GetData<int>("fn_tblconfiguracionsistema_actualizar", new TblConfiguracionSistema
             {
                 lConfig_id = ConfiguracionSistema.lConfig_id,
-                lUsuario_id = ConfiguracionSistema.lUsuario_id,
+                lUsuarios_id = ConfiguracionSistema.lUsuarios_id,
                 sConfig_intentos_fallidos_bloqueo = ConfiguracionSistema.sConfig_intentos_fallidos_bloqueo,
                 sConfig_inactividad_sesion = ConfiguracionSistema.sConfig_inactividad_sesion,
                 sConfig_tolerancia_marcaje_minutos = ConfiguracionSistema.sConfig_tolerancia_marcaje_minutos,

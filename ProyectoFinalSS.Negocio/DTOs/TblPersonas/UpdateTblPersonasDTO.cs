@@ -9,7 +9,7 @@ namespace ProyectoFinalSS.Negocio.DTOs.TblPersonas
         public int lPersonas_id { get; set; }
         public string sPersonas_nm { get; set; }
         public string sPersonas_aps { get; set; }
-        public DateTime sPersonas_fecha_nacimiento { get; set; } //es solo Date
+        public DateOnly sPersonas_fecha_nacimiento { get; set; } //es solo Date
         public string sPersonas_correo { get; set; }
         public string sPersonas_telefono { get; set; }
         public string sPersonas_numero_carnet { get; set; }

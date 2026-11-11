@@ -19,7 +19,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
         {
             TblPisos objTblPisos = new TblPisos
             {
-                lEdificios_id = tblPisos.lEdificios_id,
+                lEdificio_id = tblPisos.lEdificio_id,
                 sPiso_nombre = tblPisos.sPiso_nombre,
                 sPiso_codigo_corto = tblPisos.sPiso_codigo_corto
             };
@@ -31,7 +31,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             TblPisos objTblPisos = new TblPisos
             {
                 lPisos_id = tblPisos.lPisos_id,
-                lEdificios_id = tblPisos.lEdificios_id,
+                lEdificio_id = tblPisos.lEdificio_id,
                 sPiso_nombre = tblPisos.sPiso_nombre,
                 sPiso_codigo_corto = tblPisos.sPiso_codigo_corto
             };
@@ -50,7 +50,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
             return new ReadTblPisosDTO
             {
                 lPisos_id = result.lPisos_id,
-                lEdificios_id = result.lEdificios_id,
+                lEdificio_id = result.lEdificio_id,
                 sPiso_nombre = result.sPiso_nombre,
                 sPiso_codigo_corto = result.sPiso_codigo_corto
             };
@@ -66,7 +66,7 @@ namespace ProyectoFinalSS.Negocio.Servicios
                 var tblPisosDTO = new ReadTblPisosDTO
                 {
                     lPisos_id = tblPisos.lPisos_id,
-                    lEdificios_id = tblPisos.lEdificios_id,
+                    lEdificio_id = tblPisos.lEdificio_id,
                     sPiso_nombre = tblPisos.sPiso_nombre,
                     sPiso_codigo_corto = tblPisos.sPiso_codigo_corto
                 };
